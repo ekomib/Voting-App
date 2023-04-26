@@ -5,6 +5,9 @@ const voteFunctions = require("./utils/vote");
 
 const app = express();
 
+//heroku port
+const port = process.env.PORT || 4000;
+
 // For CSS, IMG, & Client Side JS
 const publicDirectory = path.join(__dirname, "../public");
 
@@ -41,7 +44,6 @@ app.get("/register", (req, res) => {
   );
 });
 
-const portNumber = { port: 3000 };
-app.listen(({ port } = portNumber), () => {
+app.listen(port, () => {
   console.log("We are ready and listening on " + port);
 });

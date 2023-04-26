@@ -23,7 +23,7 @@ votingForm.addEventListener("submit", (e) => {
   const location = city.value;
 
   fetch(
-    `http://localhost:3000/register?first=${first}&surname=${sname}&email=${mail}&tel=${telNo}&city=${location}`
+    `/register?first=${first}&surname=${sname}&email=${mail}&tel=${telNo}&city=${location}`
   ).then((response) => {
     console.log(response.url);
   });
